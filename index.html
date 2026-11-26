@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DIAMOTIONX | Princess Diamond Major. UGC Creator, AI Video Creator and Video Editor.">
+  <title>DIAMOTIONX | Princess Diamond Major</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+.hero-image {
+  width: 100%;
+  max-width: 420px;
+  height: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 24px;
+  position: relative;
+  background: #F0F1F3;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  border-radius: 24px;
+}
+
+@media (max-width: 600px) {
+  .hero-image {
+    max-width: 320px;
+    height: 380px;
+  }
+}
+  </style>
+  <style>
+    :root {
+      --blue: #2D8CFF;
+      --navy: #0A0F2C;
+      --white: #FFFFFF;
+      --gray: #F0F1F3;
+      --muted: #687187;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--navy);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      color: var(--blue);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      max-width: 620px;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid #e9edf3;
+    }
+
+    nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 25px;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-cta, .btn {
+      background: var(--blue);
+      color: white;
+      padding: 13px 23px;
+      border-radius: 7px;
+      font-weight: 700;
+      display: inline-block;
+      transition: .3s;
+      border: 1px solid var(--blue);
+    }
+
+    .nav-cta:hover, .btn:hover {
+      background: var(--navy);
+      border-color: var(--navy);
+      transform: translateY(-3px);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 0;
+      font-size: 27px;
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(45,140,255,.13), transparent 30%),
+        linear-gradient(135deg, #fff 45%, #f2f7ff);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 50px;
+      padding: 85px 0;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      color: var(--blue);
+      background: #eaf3ff;
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(43px, 6vw, 70px);
+      line-height: 1.08;
+      letter-spacing: -3px;
+      margin-bottom: 23px;
+    }
+
+    .hero h1 span {
+      color: var(--blue);
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 540px;
+      margin-bottom: 30px;
+      font-size: 17px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--navy);
+      border: 1px solid #ccd3df;
+      padding: 13px 23px;
+      border-radius: 7px;
+      font-weight: 700;
+      display: inline-block;
+      transition: .3s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .hero-image {
+      min-height: 430px;
+      background: linear-gradient(145deg, #dceaff, #f0f1f3);
+      border-radius: 180px 180px 25px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image::before {
+      content: "YOUR PORTRAIT";
+      color: #8ca9cb;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .about-card {
+      background: var(--navy);
+      color: white;
+      border-radius: 16px;
+      padding: 45px 35px;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about-card strong {
+      color: var(--blue);
+      font-size: 55px;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .about-card p {
+      color: #d2d9e8;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 17px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: var(--gray);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 45px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 32px;
+      border-radius: 12px;
+      border: 1px solid #e6eaf0;
+      transition: .3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 15px 35px rgba(10,15,44,.08);
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: #eaf3ff;
+      color: var(--blue);
+      font-size: 24px;
+      margin-bottom: 22px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* EDUCATION AND EXPERIENCE */
+
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 45px;
+    }
+
+    .timeline-item {
+      border-left: 3px solid var(--blue);
+      padding: 5px 0 25px 23px;
+      margin-bottom: 25px;
+    }
+
+    .timeline-item h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .timeline-item .place {
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    /* TOOLS */
+
+    .tools {
+      background: var(--navy);
+      color: white;
+    }
+
+    .tools .section-description {
+      color: #c3cada;
+    }
+
+    .tool-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 35px;
+    }
+
+    .tool {
+      border: 1px solid #29365c;
+      background: #131b40;
+      color: #e7edff;
+      padding: 13px 21px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .tool:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+    }
+
+    /* PORTFOLIO */
+
+    .portfolio {
+      background: #f8faff;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 23px;
+      margin-top: 45px;
+    }
+
+    .portfolio-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e4e9f1;
+      transition: .3s;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(10,15,44,.09);
+    }
+
+    .video-placeholder {
+      aspect-ratio: 16/10;
+      background: linear-gradient(135deg, #dceaff, #eef1f5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6485af;
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+
+    .portfolio-info {
+      padding: 20px;
+    }
+
+    .portfolio-info h3 {
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    .portfolio-info p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: var(--blue);
+      color: white;
+      text-align: center;
+    }
+
+    .contact .section-label {
+      color: #dceaff;
+    }
+
+    .contact .section-description {
+      color: #eaf3ff;
+      margin: auto;
+    }
+
+    .contact .section-title {
+      max-width: 700px;
+      margin: auto auto 18px;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background: white;
+      color: var(--navy);
+      padding: 14px 27px;
+      border-radius: 7px;
+      margin-top: 30px;
+      font-weight: 800;
+      transition: .3s;
+    }
+
+    .contact-button:hover {
+      background: var(--navy);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 23px;
+      margin-top: 30px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--navy);
+      color: #c3cada;
+      text-align: center;
+      padding: 25px 0;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* ANIMATIONS */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width: 850px) {
+      .nav-links {
+        gap: 15px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+
+      .card-grid, .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        gap: 30px;
+      }
+    }
+
+    @media(max-width: 650px) {
+      .section {
+        padding: 75px 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 25px 5%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        border-bottom: 1px solid #e9edf3;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hero-grid, .about-grid, .timeline-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero-image {
+        min-height: 350px;
+        max-width: 390px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .card-grid, .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-card {
+        min-height: 230px;
+      }
+
+      .social-links {
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="container">
+      <a href="#home" class="logo">DIAMOTION<span>X</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <span class="hero-tag">CREATIVITY MEETS TECHNOLOGY</span>
+        <h1>Turning Ideas Into <span>Captivating</span> Visual Experiences.</h1>
+        <p>
+          Hi, I'm Princess Diamond Major. I'm a UGC Creator,
+          AI Video Creator, and Video Editor passionate about
+          creating engaging visual content and bringing ideas to life.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#portfolio" class="btn">Explore My Work</a>
+          <a href="#contact" class="btn-outline">Let's Connect</a>
+        </div>
+      </div>
+      
+<div class="hero-image" id="heroImage">
+  <img
+    src="https://i.ibb.co/bgHjYcyB/IMG-20261111-WA0057.jpg"
+    alt="Princess Diamond Major"
+  >
+</div>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="about-card">
+        <strong>01.</strong>
+        <h2>Creative Vision.<br>Visual Impact.</h2>
+        <p>Bringing stories to life through creativity and technology.</p>
+      </div>
+
+      <div class="about-text">
+        <div class="section-label">ABOUT ME</div>
+        <h2 class="section-title">Hello, I'm Princess Diamond Major.</h2>
+
+        <p>
+          I'm a UGC Creator, AI Video Creator, and Video Editor
+          passionate about bringing ideas to life through creative
+          storytelling and engaging visual content.
+        </p>
+
+        <p>
+          I specialize in creating authentic, eye-catching content
+          that helps brands connect with their audiences, communicate
+          their message, and stand out in the digital space.
+        </p>
+
+        <p>
+          From UGC videos and AI-powered visuals to professionally
+          edited videos, I combine creativity, storytelling, and
+          technology to create content that makes an impact.
+        </p>
+
+        <p>
+          I believe every brand has a story worth telling, and my goal
+          is to help bring those stories to life through visuals that
+          capture attention, spark interest, and leave a lasting impression.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-label">WHAT I DO</div>
+      <h2 class="section-title">My Creative Services</h2>
+      <p class="section-description">
+        Creative solutions designed to help communicate ideas and
+        connect with audiences through visual storytelling.
+      </p>
+
+      <div class="card-grid">
+        <div class="service-card">
+          <div class="service-icon">✂</div>
+          <h3>Video Editing</h3>
+          <p>Engaging video editing with thoughtful pacing, transitions,
+          and storytelling.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">✦</div>
+          <h3>AI Video Creation</h3>
+          <p>AI-powered video content that turns creative concepts
+          into visual experiences.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">▶</div>
+          <h3>UGC Creation</h3>
+          <p>Authentic user-generated style videos that help brands
+          communicate with their audiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+  <!-- EDUCATION AND EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-label">MY JOURNEY</div>
+      <h2 class="section-title">Education & Experience</h2>
+
+      <div class="timeline-grid">
+        <div>
+          <h2 style="margin-bottom:28px;">Education & Training</h2>
+
+          <div class="timeline-item">
+            <h3>Video Editing & AI Video Creation</h3>
+            <div class="place">TeQnix Academy</div>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Creative Media Training</h3>
+            <div class="place">Mega Skills Academy</div>
+            <p>Video Editing, Strategic Positioning, and AI Video Creation.</p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>AI Video Creation</h3>
+            <div class="place">Miracle AI Class</div>
+          </div>
+        </div>
+
+        <div>
+          <h2 style="margin-bottom:28px;">Experience</h2>
+
+          <div class="timeline-item">
+            <h3>Intern</h3>
+            <div class="place">TeQnix Academy</div>
+            <p>Gained practical experience in video editing and
+            AI-powered video creation.</p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>AI Video Creator</h3>
+            <div class="place">Dominion Chapel International Church</div>
+            <p>Created AI-powered visual content to communicate
+            messages creatively and effectively.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="section tools">
+    <div class="container">
+      <div class="section-label">MY TOOLKIT</div>
+      <h2 class="section-title">Tools I Work With</h2>
+      <p class="section-description">
+        Digital tools that support my creative process and content production.
+      </p>
+
+      <div class="tool-list">
+        <span class="tool">Google Flow</span>
+        <span class="tool">Grok</span>
+        <span class="tool">Kling AI</span>
+        <span class="tool">CapCut</span>
+        <span class="tool">InShot</span>
+        <span class="tool">ChatGPT</span>
+        <span class="tool">Suno AI</span>
+        <span class="tool">ElevenLabs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="section portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-label">SELECTED WORK</div>
+      <h2 class="section-title">My Creative Portfolio</h2>
+      <p class="section-description">
+        A selection of creative projects. Portfolio videos will be added here.
+      </p>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-card">
+  <div class="portfolio-preview">
+    <span>PROJECT 01</span>
+  </div>
+
+  <div class="portfolio-info">
+    <h3>AI Video</h3>
+    <p>AI Video Creation & Video Editing</p>
+    <a href="https://imgpile.com/m/VUPsegM"
+       target="_blank"
+       rel="noopener noreferrer">
+       Explore Project →
+    </a>
+  </div>
+        </div>
+        
+<!-- PROJECT 02 -->
+<div class="portfolio-card">
+  <div class="portfolio-preview">
+    <span>PROJECT 02</span>
+  </div>
+  <div class="portfolio-info">
+    <h3>Nursery Rhyme</h3>
+    <p>AI Video Creation</p>
+    <a href="https://imgpile.com/m/GjMMZ16" target="_blank" rel="noopener noreferrer">Explore Project →</a>
+  </div>
+</div>
+
+<!-- PROJECT 03 -->
+<div class="portfolio-card">
+  <div class="portfolio-preview">
+    <span>PROJECT 03</span>
+  </div>
+  <div class="portfolio-info">
+    <h3>AI Video</h3>
+    <p>AI Video Creation</p>
+    <a href="https://imgpile.com/m/MlDk0Pq" target="_blank" rel="noopener noreferrer">Explore Project →</a>
+  </div>
+</div>
+
+<!-- PROJECT 04 -->
+<div class="portfolio-card">
+  <div class="portfolio-preview">
+    <span>PROJECT 04</span>
+  </div>
+  <div class="portfolio-info">
+    <h3>Bethel Dominion Chapel</h3>
+    <p>Creative Video Production</p>
+    <a href="https://imgpile.com/m/BI7m8XB" target="_blank" rel="noopener noreferrer">Explore Project →</a>
+  </div>
+</div>
+
+<!-- PROJECT 05 -->
+<div class="portfolio-card">
+  <div class="portfolio-preview">
+    <span>PROJECT 05</span>
+  </div>
+  <div class="portfolio-info">
+    <h3>Coca-Cola Ads</h3>
+    <p>AI Advertising & Video Creation</p>
+    <a href="https://imgpile.com/m/B0WPuoR" target="_blank" rel="noopener noreferrer">Explore Project →</a>
+  </div>
+</div>
+
+<!-- PROJECT 06 -->
+<div class="portfolio-card">
+  <div class="portfolio-preview">
+    <span>PROJECT 06</span>
+  </div>
+  <div class="portfolio-info">
+    <h3>AI War</h3>
+    <p>AI Video Creation</p>
+    <a href="https://imgpile.com/m/fg8N1Bl" target="_blank" rel="noopener noreferrer">Explore Project →</a>
+  </div>
+</div>
+
+<!-- PROJECT 07 -->
+<div class="portfolio-card">
+  <div class="portfolio-preview">
+    <span>PROJECT 07</span>
+  </div>
+  <div class="portfolio-info">
+    <h3>Korean Video</h3>
+    <p>AI Video Creation & Editing</p>
+    <a href="https://imgpile.com/m/4iWPChQ" target="_blank" rel="noopener noreferrer">Explore Project →</a>
+  </div>
+</div>
+ </section>
+  
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-label">LET'S WORK TOGETHER</div>
+      <h2 class="section-title">Have an Idea? Let's Bring It to Life.</h2>
+
+      <p class="section-description">
+        Let's turn your ideas into captivating content and create
+        something meaningful together.
+      </p>
+
+      <a href="mailto:YOUR_EMAIL@example.com" class="contact-button">
+        Send Me an Email
+      </a>
+
+      <div class="social-links">
+        <a href="YOUR_FACEBOOK_LINK" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="YOUR_WHATSAPP_LINK" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="YOUR_LINKEDIN_LINK" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="YOUR_TIKTOK_LINK" target="_blank" rel="noopener noreferrer">TikTok</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> <strong>DIAMOTIONX</strong>. All rights reserved.</p>
+      <p>Designed with creativity. Built by DIAMOTIONX.</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("active");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Scroll reveal animations
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealElements.forEach(element => {
+      observer.observe(element);
+    });
+
+    // Automatic footer year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
